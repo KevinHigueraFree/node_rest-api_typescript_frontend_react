@@ -34,7 +34,7 @@ export async function action({ request, params }: ActionFunctionArgs) {
     // wait to addProduct do all its mothods or steps
 
     if (params.id !== undefined) {
-        const result = await updateProduct(data, +params.id);
+         await updateProduct(data, +params.id);
         return redirect('/');
     }
 
